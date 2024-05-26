@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Collage_Project:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Collage_Project_jar</output-path>
+    <root id="archive" name="Collage_Project.jar">
+      <element id="module-output" name="Collage_Project" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../jars/json-simple-2.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/miglayout-swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/miglayout-core.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
