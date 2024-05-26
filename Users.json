@@ -1,0 +1,81 @@
+{
+  "Users": [
+    {
+      "password": "john123",
+      "address": "123 Main St, City, Country",
+      "isAdmin": false,
+      "id": 1001,
+      "username": "john_doe"
+    },
+    {
+      "password": "jane456",
+      "address": "456 Elm St, City, Country",
+      "isAdmin": false,
+      "id": 1002,
+      "username": "jane_smith"
+    },
+    {
+      "password": "mark789",
+      "address": "789 Oak St, City, Country",
+      "isAdmin": false,
+      "id": 1003,
+      "username": "mark_jackson"
+    },
+    {
+      "password": "sara101",
+      "address": "101 Pine St, City, Country",
+      "isAdmin": false,
+      "id": 1004,
+      "username": "sara_wilson"
+    },
+    {
+      "password": "david202",
+      "address": "202 Cedar St, City, Country",
+      "isAdmin": false,
+      "id": 1005,
+      "username": "david_carter"
+    },
+    {
+      "password": "emily303",
+      "address": "303 Maple St, City, Country",
+      "isAdmin": false,
+      "id": 1006,
+      "username": "emily_miller"
+    },
+    {
+      "password": "adam404",
+      "address": "404 Walnut St, City, Country",
+      "isAdmin": false,
+      "id": 1007,
+      "username": "adam_thomas"
+    },
+    {
+      "password": "laura505",
+      "address": "505 Birch St, City, Country",
+      "isAdmin": false,
+      "id": 1008,
+      "username": "laura_white"
+    },
+    {
+      "password": "chris606",
+      "address": "606 Sycamore St, City, Country",
+      "isAdmin": false,
+      "id": 1009,
+      "username": "chris_martin"
+    },
+    {
+      "password": "adminpass",
+      "address": "Admin Address, City, Country",
+      "isAdmin": true,
+      "id": 1010,
+      "username": "admin"
+    },
+    {
+      "password": "123",
+      "address": "mandra",
+      "id": 1011,
+      "isAdmin": false,
+      "username": "maro"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "ElectronicProducts": [
+    {
+      "productId": 1,
+      "name": "TV",
+      "price": 499.99,
+      "warrantyPeriod": 24,
+      "brand": "Samsung"
+    },
+    {
+      "productId": 2,
+      "name": "Microwave",
+      "price": 99.99,
+      "warrantyPeriod": 12,
+      "brand": "Sharp"
+    },
+    {
+      "productId": 3,
+      "name": "Tv",
+      "price": 2922.99,
+      "warrantyPeriod": 6,
+      "brand": "LG"
+    },{
+      "productId": 4,
+      "name": "Smartphone",
+      "price": 799.99,
+      "warrantyPeriod": 12,
+      "brand": "Apple"
+    },
+    {
+      "productId": 5,
+      "name": "Laptop",
+      "price": 1299.99,
+      "warrantyPeriod": 24,
+      "brand": "Dell"
+    },
+    {
+      "productId": 6,
+      "name": "Bluetooth Speaker",
+      "price": 99.99,
+      "warrantyPeriod": 12,
+      "brand": "JBL"
+    },
+    {
+      "productId": 7,
+      "name": "Gaming Console",
+      "price": 499.99,
+      "warrantyPeriod": 24,
+      "brand": "Sony"
+
+    },
+    {
+      "productId": 8,
+      "name": "Digital Camera",
+      "price": 399.99,
+      "warrantyPeriod": 12,
+      "brand": "Canon"
+    }
+  ],
+  "BookProducts": [
+    {
+      "productId": 1,
+      "name": "OOP",
+      "price": 499.99,
+      "author": "O'Relly",
+      "publisher": "O'Relly"
+    },
+    {
+      "productId": 2,
+      "name": "Novel",
+      "price": 14.99,
+      "author": "John Doe",
+      "publisher": "Penguin Books"
+    },
+    {
+      "productId": 3,
+      "name": "The Great Gatsby",
+      "price": 10.99,
+      "author": "F. Scott Fitzgerald",
+      "publisher": "Scribner"
+    },
+    {
+      "productId": 4,
+      "name": "Educated",
+      "price": 15.99,
+      "author": "Tara Westover",
+      "publisher": "Random House"
+    },
+    {
+      "productId": 5,
+      "name": "Becoming",
+      "price": 19.99,
+      "author": "Michelle Obama",
+      "publisher": "Crown Publishing Group"
+    },
+    {
+      "productId": 6,
+      "name": "Sapiens: A Brief History of Humankind",
+      "price": 16.99,
+      "author": "Yuval Noah Harari",
+      "publisher": "Harper"
+    },
+    {
+      "productId": 7,
+      "name": "The Catcher in the Rye",
+      "price": 8.99,
+      "author": "J.D. Salinger",
+      "publisher": "Little, Brown and Company"
+    }
+  ],
+  "ClothingProduct": [
+    {
+      "productId": 1,
+      "name": "T-shirt",
+      "price": 14.99,
+      "size": "M",
+      "fabric": "Cotton"
+    },
+    {
+      "productId": 2,
+      "name": "Jeans",
+      "price": 49.99,
+      "size": "32W",
+      "fabric": "Jean"
+    },
+    {
+      "productId": 3,
+      "name": "Jacket",
+      "price": 89.99,
+      "size": "L",
+      "fabric": "Wool"
+    },
+    {
+      "productId": 4,
+      "name": "Sweatshirt",
+      "price": 39.99,
+      "size": "S",
+      "fabric": "Linen"
+    },
+    {
+      "productId": 13,
+      "name": "Sneakers",
+      "price": 79.99,
+      "size": "10",
+      "fabric": "Satin"
+    }
+  ]
+}
