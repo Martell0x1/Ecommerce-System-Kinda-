@@ -1,12 +1,14 @@
 # Ecommerce System
 
 ## Overview
-Hello , this was my second project during my journy to be a software engineer, i've been coding lots of projects so far and they still under development , anyways this is not a compelete Ecommerce System but it's just the begining , as i'm still beginner , the project is simple , it uses Json Files to Store the data and manipluate it in different parts in the programe
+Hello,
+
+This Project marks my second venture in my journey to becoming a software engineer , Throughout this journey , I have developed numerous projects , many of which are still in progress , While this is not a compelete eCommerce system , it represents the initial steps of its development.As I am still a beginner,the project is intentionally simple,it utilizes the JSON files for data storageand manipulation across various parts of the programe
 
 # Key Point
 
-- Users Can Login / register in the System
-- an Admin user Can Have a heigher Privileges than a normal user (ie. Add a new Product , mainpulates the database...and so on)
+- Users Can Login / register into the System
+- We Are Planning To introduce a new Feature that will distinguish bewtween two types of users: normal user and an admin user. The admin user is granted higher privileges compared to the normal user (ie.Adding new users , removing new users , manipulating the packages database and so on),ensuring enhanced capabilities and access to advanced features , this inhancement aims at improving the overall functionality and user experience of out system.
 - The Database is just a json files there're three
   1- A Json file for Products
   2- A Json file for Users registered in the System
@@ -16,8 +18,8 @@ Hello , this was my second project during my journy to be a software engineer, i
 The reason of doing that project that i'm trying to achieve a goal , which is making # of projects in this summer as a practical practice on the OO concepts.
 
 ## What I Have Learned
-Working with Java Swing Library for the first time is absolutoly wonderfull , so i learned some of it's main principles , how it works and I also learned the logic behind the GUI Application in general.
-Also , learning the Ability of Reading / Writing And Manibulating Json files was such a greate experience
+Working with Java Swing Library for the first time is absolutoly wonderfull,I learned some of it's main principles,How it works and I also the logic behind the GUI Applications in general.
+Also,learning the Ability of Reading / Writing And Manibulating JSON files was such a greate experience
 
 ## Requirements
 - git , if you run on linux (Debina/Ubuntu) , use dnf if you os is a Fedora-based kernal
@@ -50,3 +52,6 @@ We Welcom Any Contributions / assitance in the following:
 
 - Java Swing
 - Json File Processed With [Json-Simple](https://code.google.com/archive/p/json-simple/)  lib
+
+# About the Author
+Check My Github Profile.
