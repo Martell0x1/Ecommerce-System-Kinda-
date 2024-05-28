@@ -44,6 +44,7 @@ public class DataBaseHandle {
         return list;
     }
 
+
     public static Map<String, ArrayList<Product>> GetAllProducts(){
         Set<String> AllProductsType = DataBaseHandle.GetAllProductsType();
 
@@ -106,20 +107,18 @@ public class DataBaseHandle {
         return ProductMap;
     }
 
-    public static ArrayList<User> LoadAllUsers() throws IOException, ParseException {
+    public static ArrayList<User> LoadAllUsers() throws IOException,ParseException {
         JSONArray UsersObjects = (JSONArray) UsersSobject.get(UsersDataBaseKey);
-
-
         ArrayList<User> Users = new ArrayList<>();
 
         for (Object obj : UsersObjects) {
             JSONObject CurrentObject = (JSONObject) obj;
             User user = new User(
-                    (String) CurrentObject.get("username"),
-                    (String) CurrentObject.get("password"),
-                    ((Boolean) CurrentObject.get("isAdmin")).booleanValue(),
-                    0,
-                    (String) CurrentObject.get("address")
+                (String) CurrentObject.get("username"),
+                (String) CurrentObject.get("password"),
+                ((Boolean) CurrentObject.get("isAdmin")).booleanValue(),
+                0,
+                (String) CurrentObject.get("address")
             );
 
             Object idValue = CurrentObject.get("id");
@@ -136,6 +135,7 @@ public class DataBaseHandle {
             Users.add(user);
         }
         return Users;
+
     }
 
 

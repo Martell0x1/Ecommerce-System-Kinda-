@@ -2,6 +2,7 @@ public class Customer {
     private int CustomerId;
     private String Name;
     private String Address;
+    private boolean isadmin;
 
     private Cart customerCart = new Cart();
 
@@ -39,10 +40,14 @@ public class Customer {
         Address = address;
     }
 
-    public Customer(int customerId, String name, String address) {
+    public void setIsAdmin(boolean id){this.isadmin = id;}
+    public boolean isAdmin(){return this.isadmin;}
+
+    public Customer(int customerId, String name, String address , boolean admin) {
         this.setCustomerId(customerId);
         Name = name;
         Address = address;
+        this.isadmin = admin;
     }
 
     public Customer(){
