@@ -39,7 +39,8 @@ public class UserManager {
                     customer = new Customer(
                             user.getCustomerId(),
                             user.getUsername(),
-                            user.getAddress()
+                            user.getAddress(),
+                            user.isAdmin()
                     );
                     break;
                 }

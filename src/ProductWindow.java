@@ -1,5 +1,8 @@
+import org.json.simple.parser.ParseException;
+
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -45,6 +48,7 @@ public class ProductWindow extends JFrame {
         nameLabel.setBounds(20, 170, 300, 30);
         JLabel addressLabel = new JLabel("Address: " + customer.getAddress());
         addressLabel.setBounds(20, 210, 300, 30);
+
         customerPanel.revalidate();
         customerPanel.repaint();
 
@@ -54,12 +58,72 @@ public class ProductWindow extends JFrame {
         JButton Logout = new JButton("Log out");
         Logout.setBounds(140,250,100,30);
 
+        JLabel AdminLabel = null;
+        JButton ShowAllUsers = null;
+        JButton AddNewPackage= null;
+        JButton RemovePackage= null;
+
+        if(customer.isAdmin()){
+            ShowMyCart.setVisible(false);
+            AdminLabel = new JLabel("You're An Admin");
+            AdminLabel.setBounds(80,250,100,30);
+//            AdminLabel.setBackground(new Color(255,0,0));
+            Logout.setBounds(80,300,100,30);
+            ShowAllUsers = new JButton("Show All Users");
+            ShowAllUsers.setBounds(10,350,130,30);
+            AddNewPackage = new JButton("Add New Package");
+            AddNewPackage.setBounds(150,350,140,30);
+            RemovePackage = new JButton("Remove Package");
+            RemovePackage.setBounds(10,400,140,30);
+            customerPanel.add(AdminLabel);
+            customerPanel.add(ShowAllUsers);
+            customerPanel.add(AddNewPackage);
+            customerPanel.add(RemovePackage);
+            ShowAllUsers.addActionListener((event)->{
+                ArrayList<User> AllUsers = null;
+                try {
+                    AllUsers = DataBaseHandle.LoadAllUsers();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                } catch (ParseException e) {
+                    throw new RuntimeException(e);
+                }
+
+                JDialog dialog = new JDialog();
+                dialog.setSize(700,800);
+                dialog.setLayout(null);
+                dialog.setResizable(false);
+                JPanel MainPanel = new JPanel();
+                MainPanel.setLayout(new GridLayout());
+                MainPanel.setVisible(true);
+
+                for(User x : AllUsers){
+                    JScrollPane UserPane =new JScrollPane();
+                    UserPane.setLayout(null);
+                    JLabel Info = new JLabel();
+                    Info.setText("<html>" +
+                        "Name: "+x.getUsername()+"<br>"
+                        +"Address: "+x.getAddress()+"<br>"
+                        +"Passowrd: "+x.getPassword()+"<br>"
+                        +"Admin: "+x.isAdmin());
+                    Info.setVisible(true);
+                    UserPane.setVisible(true);
+                    UserPane.setViewportView(Info);
+                    MainPanel.add(UserPane);
+                }
+                dialog.add(MainPanel);
+                dialog.setVisible(true);
+            });
+
+        }
+
         customerPanel.add(welcomeLabel);
         customerPanel.add(user);
         customerPanel.add(addressLabel);
         customerPanel.add(nameLabel);
         customerPanel.add(ShowMyCart);
         customerPanel.add(Logout);
+
 
         Logout.addActionListener((e)->{
             DataBaseHandle.SaveCurrentUser("");
@@ -72,8 +136,6 @@ public class ProductWindow extends JFrame {
             dialog.setSize(300, 200);
             dialog.setLayout(null);
             dialog.setResizable(false);
-
-
 
             JLabel label = new JLabel(
                     "<html>"+
@@ -125,26 +187,36 @@ public class ProductWindow extends JFrame {
 
 
                 add =  new JButton("add");
+                JButton Delete =null;
                 add.setBounds(200,10,100,30);
 
 
                 JButton remove = new JButton("remove");
                 remove.setBounds(200,50,100,30);
 
+                if(customer.isAdmin()){
+                    add.setText("Edit");
+                    Delete = new JButton("Remove");
+                    Delete.setBounds(200,50,100,30);
+                    remove.setVisible(false);
+                }
+
                 AtomicInteger count = new AtomicInteger();
 
                 add.addActionListener((event)->{
-                    count.getAndIncrement();
-                    this.customer.getCustomerCart().AddProduct(P);
-                    productpanel.setBackground(Color.GRAY);
-                    productpanel.add(remove);
-                    remove.setVisible(true);
-                    productpanel.revalidate();
-                    productpanel.repaint();
-                    ++this.NumberOfProducts;
-                    ShowMyCart.setText("My Car "+this.NumberOfProducts);
-                    customerPanel.revalidate();
-                    customerPanel.repaint();
+                    if(!customer.isAdmin()) {
+                        count.getAndIncrement();
+                        this.customer.getCustomerCart().AddProduct(P);
+                        productpanel.setBackground(Color.GRAY);
+                        productpanel.add(remove);
+                        remove.setVisible(true);
+                        productpanel.revalidate();
+                        productpanel.repaint();
+                        ++this.NumberOfProducts;
+                        ShowMyCart.setText("My Car " + this.NumberOfProducts);
+                        customerPanel.revalidate();
+                        customerPanel.repaint();
+                    }
 
 //                    YalaBena.Play();
                 });
@@ -206,6 +278,7 @@ public class ProductWindow extends JFrame {
                 productInfo.setBounds(0,0,200,100);
                 productpanel.add(productInfo);
                 productpanel.add(add);
+                if(customer.isAdmin()) productpanel.add(Delete);
                 panel.add(productpanel);
                 panel.revalidate();
 
